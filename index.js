@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000; // Use PORT from .env or default to 3000
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Connected to MongoDB'))
     .catch((error) => {
         console.error('MongoDB Connection Error:', error.message);
